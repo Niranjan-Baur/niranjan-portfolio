@@ -55,7 +55,7 @@ function Project() {
     <div className="projects-container" id="projects">
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
         <h1>Projects</h1>
-        <a  >
+        <a href="#">
           <InfoOutlined
             onClick={() => {
               alert(
