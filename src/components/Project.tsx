@@ -6,6 +6,8 @@ import bobAndBertsFrame from "../assets/images/bobBertsFrame.png";
 import "../assets/styles/Project.scss";
 import AndroidIcon from "@mui/icons-material/Android";
 import { InfoOutlined } from "@mui/icons-material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
 function Project() {
   const projects = [
@@ -55,8 +57,9 @@ function Project() {
     <div className="projects-container" id="projects">
       <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
         <h1>Projects</h1>
-        <a href="#">
+        <div>
           <InfoOutlined
+            style={{ color: "gray" }}
             onClick={() => {
               alert(
                 "Logos and trademarks belong to their respective owners. Used here for informational and portfolio purposes only."
@@ -64,7 +67,7 @@ function Project() {
             }}
             titleAccess="** Logos and trademarks belong to their respective owners. Used here for informational and portfolio purposes only."
           />
-        </a>
+        </div>
       </div>
 
       <div className="projects-grid">
@@ -82,11 +85,14 @@ function Project() {
               <a href={project.link} target="_blank" rel="noreferrer">
                 <h2>{project.title}</h2>
               </a>
-              {/* <a href={project.link} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon icon={faExternalLink} />
-              </a> */}
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <FontAwesomeIcon
+                  icon={faExternalLink}
+                  style={{ color: "gray" }}
+                />
+              </a>
               <a href={project.playstore} target="_blank" rel="noreferrer">
-                <AndroidIcon />
+                <AndroidIcon style={{ color: "gray" }} />
               </a>
             </div>
             <p>{project.description}</p>
