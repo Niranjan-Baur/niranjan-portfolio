@@ -83,7 +83,7 @@ function Expertise() {
 
         <div style={{ display: "flex", justifyContent: "center" }}>
           <a
-            href="https://drive.google.com/file/d/1m9elrEAiPfQFcpRRL9ZhfEUf97Ve3hih/view?usp=sharing"
+            href="https://drive.google.com/file/d/1jdIFM8BkNhQrjiCyy2c5TxGT7ZwYzwj4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
