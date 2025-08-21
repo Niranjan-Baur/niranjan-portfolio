@@ -40,7 +40,7 @@ function Expertise() {
               Android and iOS devices.
             </p>
             <div className="flex-chips">
-              <span className="chip-title">Highlights:</span>
+              <span className="chip-title">Tech stack:</span>
               {mobileLabels.map((label, index) => (
                 <Chip key={index} className="chip" label={label} />
               ))}

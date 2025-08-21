@@ -3,14 +3,23 @@ import clrinetFrame from "../assets/images/clirnetFrame.png";
 import doctubeFrame from "../assets/images/doctubeFrame.png";
 import mymdFrame from "../assets/images/mymdFrame.png";
 import bobAndBertsFrame from "../assets/images/bobBertsFrame.png";
+import npmFrame from "../assets/images/npmFrame.png";
 import "../assets/styles/Project.scss";
 import AndroidIcon from "@mui/icons-material/Android";
 import { InfoOutlined } from "@mui/icons-material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faNpm } from "@fortawesome/free-brands-svg-icons";
 
 function Project() {
   const projects = [
+    {
+      title: "quickstart-react-native",
+      description: `quickstart-react-native is an open-source CLI tool that lets you instantly create a React Native app with axios, react-navigation, react-native-paper (optional) package, and pre-configured project structure — all in one command.`,
+      image: npmFrame,
+      npmLink: "https://www.npmjs.com/package/quickstart-react-native",
+      github: "https://github.com/Niranjan-Baur/quickstart-react-native",
+    },
     {
       title: "Clirnet",
       description: `I was actively involved in maintaining and improving both the React
@@ -85,15 +94,30 @@ function Project() {
               <a href={project.link} target="_blank" rel="noreferrer">
                 <h2>{project.title}</h2>
               </a>
-              <a href={project.link} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon
-                  icon={faExternalLink}
-                  style={{ color: "gray" }}
-                />
-              </a>
-              <a href={project.playstore} target="_blank" rel="noreferrer">
-                <AndroidIcon style={{ color: "gray" }} />
-              </a>
+
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon
+                    icon={faExternalLink}
+                    style={{ color: "gray" }}
+                  />
+                </a>
+              )}
+              {project.playstore  && (
+                <a href={project.playstore} target="_blank" rel="noreferrer">
+                  <AndroidIcon style={{ color: "gray" }} />
+                </a>
+              )}
+              {project.npmLink && (
+                <a href={project.npmLink} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faNpm} style={{ color: "gray",height:"30px",width:"30px" }} />
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faGithub} style={{ color: "gray",height:"20px",width:"20px" }} />
+                </a>
+              )}
             </div>
             <p>{project.description}</p>
           </div>
